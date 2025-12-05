@@ -23,3 +23,5 @@ And the head unit it'll be a single arducam, I have one I'm using for my IoT gar
 What I need to do is have it stream the video and pan/tilt its head so it doesn't need a massive view... although I will try and find a larger FOV camera just so you don't have to do so much stitching of separate images/frames
 
 No the barrel thing around the lens will be 3D printed to match the size, will just use a V3 wide angle pi camera
+
+The design is interesting because it's a mix of a legged and wheeled robot, it has a lot of joints and of course the little antenna/receiver dish thing has to spin
