@@ -21,3 +21,5 @@ I said arduino above but it will use an RPi, I have to see if the H-bridge thing
 And the head unit it'll be a single arducam, I have one I'm using for my IoT garden that I like, I'll get another one like that.
 
 What I need to do is have it stream the video and pan/tilt its head so it doesn't need a massive view... although I will try and find a larger FOV camera just so you don't have to do so much stitching of separate images/frames
+
+No the barrel thing around the lens will be 3D printed to match the size, will just use a V3 wide angle pi camera
