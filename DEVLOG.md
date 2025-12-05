@@ -15,3 +15,5 @@ So yeah this motor will determine the scale of this robot, each wheel will get o
 I had initially thought about wheels.
 
 It will probably be slow but right now I'm more interested in making the entire system/shape of the body/painting PLA, that kind of thing, I think in the future you could do it right and swap it out with BLDC's.
+
+I said arduino above but it will use an RPi, I have to see if the H-bridge thing can be commanded directly by the RPi (not powered by it).
