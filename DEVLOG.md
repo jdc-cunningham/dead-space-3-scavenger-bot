@@ -17,3 +17,7 @@ I had initially thought about wheels.
 It will probably be slow but right now I'm more interested in making the entire system/shape of the body/painting PLA, that kind of thing, I think in the future you could do it right and swap it out with BLDC's.
 
 I said arduino above but it will use an RPi, I have to see if the H-bridge thing can be commanded directly by the RPi (not powered by it).
+
+And the head unit it'll be a single arducam, I have one I'm using for my IoT garden that I like, I'll get another one like that.
+
+What I need to do is have it stream the video and pan/tilt its head so it doesn't need a massive view... although I will try and find a larger FOV camera just so you don't have to do so much stitching of separate images/frames
