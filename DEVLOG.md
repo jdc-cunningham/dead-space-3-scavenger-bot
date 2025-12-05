@@ -1,3 +1,11 @@
+### 12/05/2025
+
+5:27 PM
+
+Just thinking, I'm gonna order some more metal gear servos and a 16 channel PWM hat thing from Adafruit to run the servos
+
+This robot has a lot of joints but it only has 2 wheels, the tail wheel can just be free spinning
+
 ### 12/04/2025
 
 7:08 PM
