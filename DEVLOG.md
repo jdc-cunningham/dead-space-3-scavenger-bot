@@ -6,6 +6,10 @@ Just thinking, I'm gonna order some more metal gear servos and a 16 channel PWM 
 
 This robot has a lot of joints but it only has 2 wheels, the tail wheel can just be free spinning
 
+There are these position-servos that you can get but I'm also trying to make this thing cheap and not so complicated where I get stalled
+
+It will not be trully scale like it matches the design, for example there is a display but I was thinking what would that display be used for, kind of pointless, you could put a touch screen display on there for the RPi but again why, so that'll probably just be painted and the circuit board visible in the design of the bot will be the Pi itself so that also won't match, but it could... if you really wanted to. I just am more focused on designing the entire system/programming it to begin with. I haven't painted PLA before that'll be interesting it looks like you can get acrylic paint that is not a spray type since I'm at an apt complex.
+
 ### 12/04/2025
 
 7:08 PM
