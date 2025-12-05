@@ -1,0 +1,17 @@
+### 12/04/2025
+
+7:08 PM
+
+Recently I've been playing through all the dead space games and out of nowhere dead space 3 has this little scavenger robot that is so cute! OMG!
+
+<img src="./devlog-images/robot.JPG"/>
+
+Look at it, it has a little antenna and its head moves omg.
+
+So yeah I just went ahead and ordered these N20 motors because I've seen these motors before other people using them but I've never used them myself, I mean I've used DC motors before with regards to RC planes but not programmatically via arduino.
+
+So yeah this motor will determine the scale of this robot, each wheel will get one and it will be direct driven.
+
+I had initially thought about wheels.
+
+It will probably be slow but right now I'm more interested in making the entire system/shape of the body/painting PLA, that kind of thing, I think in the future you could do it right and swap it out with BLDC's.
