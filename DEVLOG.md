@@ -25,3 +25,5 @@ What I need to do is have it stream the video and pan/tilt its head so it doesn'
 No the barrel thing around the lens will be 3D printed to match the size, will just use a V3 wide angle pi camera
 
 The design is interesting because it's a mix of a legged and wheeled robot, it has a lot of joints and of course the little antenna/receiver dish thing has to spin
+
+The juxtaposition of gameplay is so funny, this little robot is running around looking for scrap and I'm getting ripped in half by a regenerating-unkillable zombie thing
