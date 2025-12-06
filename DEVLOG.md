@@ -1,3 +1,10 @@
+### 12/06/2025
+
+5:12 PM
+Alright did some thinking, damn this keyboard is dying losing letters
+
+https://www.youtube.com/watch?v=TjKBSoIuytI
+
 ### 12/05/2025
 
 5:27 PM
