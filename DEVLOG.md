@@ -1,3 +1,11 @@
+### 12/07/2025
+
+6:59 PM
+
+I'm writing this entry from the Pi which this robot will be using, it's an RPi 4 from the ML Hat Cam project RIP
+
+That was very sad when I took that thing apart the zooming/focusing lens with steppers... it was a POS but still it was cool
+
 ### 12/06/2025
 
 5:12 PM
