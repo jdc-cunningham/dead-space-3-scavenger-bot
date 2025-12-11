@@ -1,3 +1,29 @@
+### 12/10/2025
+
+8:54 PM
+
+So I decided since I'm broke af, and time-wise
+
+I'm not going to make this robot as detailed as possible, for example the robot is supposed to fold its legs into itself and it becomes a box... nah
+
+That requires at least 3 more servos
+
+Similarly the spinning-antenna thing probably will cut that, it will be there but not move other than lift up/down which that also won't have a servo
+
+I could probably make the antenna spin at least/have leds
+
+This is a good-sized robot and the servos have to be bigger than the MG90D that I like
+
+I'll probably get one of these: Standard servo - TowerPro SG-5010 - 5010
+
+76oz-in torque sounds plenty
+
+The main thing is I gotta get the painting right
+
+The head will still move and have the lights, less servos means less power consumption
+
+I'll build it where it's just permanenlty in the "roaming" position vs. stored
+
 ### 12/07/2025
 
 6:59 PM
