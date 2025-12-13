@@ -1,3 +1,21 @@
+### 12/13/2025
+
+4:21 PM
+
+Doing some initial wiring/programming testing for the motors
+
+Looking at this guide
+
+https://gitlab.com/qnx/projects/hardware-component-samples/-/tree/main/motor-controller?ref_type=heads
+
+5:10 PM
+
+Funny it's hard to find RPi (non pico) code for the DRV8833 module
+
+I'm not a huge AI user for code generation but in this case I'm going to try what Google search AI results has
+
+I mean it sources it from a post on gitlab
+
 ### 12/10/2025
 
 8:54 PM
