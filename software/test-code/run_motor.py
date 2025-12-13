@@ -3,9 +3,9 @@ import time
 
 # --- Pin Definitions ---
 # Use BCM numbering
-AIN1_PIN = 17  # Connect to IN1 for Motor A
-AIN2_PIN = 27  # Connect to IN2 for Motor A
-PWM_PIN = 18   # Connect to SLEEP/EN (A) for PWM Speed
+AIN1_PIN = 23  # Connect to IN1 for Motor A
+AIN2_PIN = 24  # Connect to IN2 for Motor A
+PWM_PIN = 21   # Connect to SLEEP/EN (A) for PWM Speed
 
 # --- Setup ---
 GPIO.setmode(GPIO.BCM)
