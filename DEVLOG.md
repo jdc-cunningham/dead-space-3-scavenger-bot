@@ -16,6 +16,18 @@ I'm not a huge AI user for code generation but in this case I'm going to try wha
 
 I mean it sources it from a post on gitlab
 
+5:41 PM
+
+Well... first run is a failure, motor doesn't spin from the code
+
+I did manually test the motor with the bench top power supply at 5V, it runs
+
+lol "sleep pin is not for PWM speed" damn it AI code
+
+5:56 PM
+
+Alright weird... so you don't share ground, I unplugged the ground from Pi and a new Google Search AI code sample, it's working
+
 ### 12/10/2025
 
 8:54 PM

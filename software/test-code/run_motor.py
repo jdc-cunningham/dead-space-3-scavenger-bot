@@ -1,64 +1,81 @@
 import RPi.GPIO as GPIO
 import time
 
-# --- Pin Definitions ---
-# Use BCM numbering
-AIN1_PIN = 11  # Connect to IN1 for Motor A
-AIN2_PIN = 8  # Connect to IN2 for Motor A
-PWM_PIN = 13  # Connect to SLEEP/EN (A) for PWM Speed
+# Pin Definitions (BCM numbering)
+# Use the GPIO number, not the physical pin number (e.g., GPIO 17 is physical pin 11)
+AIN1 = 17
+AIN2 = 18
+# For Motor B:
+# BIN3 = 22
+# BIN4 = 23
 
-# --- Setup ---
 GPIO.setmode(GPIO.BCM)
-GPIO.setup(AIN1_PIN, GPIO.OUT)
-GPIO.setup(AIN2_PIN, GPIO.OUT)
-GPIO.setup(PWM_PIN, GPIO.OUT)
+GPIO.setup(AIN1, GPIO.OUT)
+GPIO.setup(AIN2, GPIO.OUT)
 
-# --- PWM Setup ---
-# 100 Hz frequency (adjust as needed)
-pwm = GPIO.PWM(PWM_PIN, 100)
-pwm.start(0) # Start with 0% duty cycle (stopped)
+# Configure PWM for speed control on one of the input pins
+# You can use software PWM or hardware PWM pins for better performance
+# For simplicity, we can use one PWM pin and one digital pin
+# Here we will use PWM on AIN1 and digital on AIN2
+GPIO.setup(AIN1, GPIO.OUT)
+GPIO.setup(AIN2, GPIO.OUT)
+pwm_motor_a = GPIO.PWM(AIN1, 100)  # 100 Hz frequency
+pwm_motor_a.start(0) # Start with 0% duty cycle (stopped)
 
-def set_motor_speed(speed_percent):
-    """Sets motor speed (0-100) using PWM duty cycle."""
-    pwm.ChangeDutyCycle(speed_percent)
-    print(f"Setting speed to {speed_percent}%")
+def drive_motor_a(speed, direction):
+    # Speed is a value from 0 (stop) to 100 (full speed)
+    if direction == "forward":
+        GPIO.output(AIN2, GPIO.LOW)
+        pwm_motor_a.ChangeDutyCycle(speed)
+    elif direction == "reverse":
+        GPIO.output(AIN2, GPIO.HIGH) # AIN2 controls reverse with AIN1 PWM
+        # Note: Actual pin logic may vary by breakout board; adjust as needed
+        # This setup assumes AIN1 (PWM) and AIN2 (LOW/HIGH) control speed/direction
+        # A more common method is setting one high/low and the other PWM
+        # A better approach (using two PWM pins):
+        # if direction == "forward":
+        #    pwm_a1.ChangeDutyCycle(speed)
+        #    pwm_a2.ChangeDutyCycle(0)
+        # elif direction == "reverse":
+        #    pwm_a1.ChangeDutyCycle(0)
+        #    pwm_a2.ChangeDutyCycle(speed)
+        pass # The initial example is simpler
 
-def move_forward(speed_percent):
-    """Moves motor forward at a given speed."""
-    GPIO.output(AIN1_PIN, GPIO.HIGH)
-    GPIO.output(AIN2_PIN, GPIO.LOW)
-    set_motor_speed(speed_percent)
-    print("Moving Forward")
+    # The most basic control (digital only for full speed):
+    # if direction == "forward":
+    #     GPIO.output(AIN1, GPIO.HIGH)
+    #     GPIO.output(AIN2, GPIO.LOW)
+    # elif direction == "reverse":
+    #     GPIO.output(AIN1, GPIO.LOW)
+    #     GPIO.output(AIN2, GPIO.HIGH)
+    # elif direction == "stop":
+    #     GPIO.output(AIN1, GPIO.LOW)
+    #     GPIO.output(AIN2, GPIO.LOW)
 
-def move_backward(speed_percent):
-    """Moves motor backward at a given speed."""
-    GPIO.output(AIN1_PIN, GPIO.LOW)
-    GPIO.output(AIN2_PIN, GPIO.HIGH)
-    set_motor_speed(speed_percent)
-    print("Moving Backward")
-
-def stop_motor():
-    """Stops the motor."""
-    GPIO.output(AIN1_PIN, GPIO.LOW)
-    GPIO.output(AIN2_PIN, GPIO.LOW)
-    set_motor_speed(0)
-    print("Motor Stopped")
-
-# --- Main Test ---
 try:
-    print("Testing DRV8833 Motor Control...")
-    move_forward(50) # Move forward at 50% speed
+    print("Motor A Forward at 50% speed for 3 seconds")
+    drive_motor_a(50, "forward") # This code needs refinement for speed, see comments above
+    GPIO.output(AIN1, GPIO.HIGH) # For simple digital control
+    GPIO.output(AIN2, GPIO.LOW)
+    time.sleep(3)
+    
+    print("Stopping motor A")
+    GPIO.output(AIN1, GPIO.LOW)
+    GPIO.output(AIN2, GPIO.LOW)
     time.sleep(2)
-    stop_motor()
-    time.sleep(1)
-    move_backward(75) # Move backward at 75% speed
-    time.sleep(2)
-    stop_motor()
-    time.sleep(1)
+
+    print("Motor A Reverse at full speed for 3 seconds")
+    GPIO.output(AIN1, GPIO.LOW)
+    GPIO.output(AIN2, GPIO.HIGH)
+    time.sleep(3)
+
+    print("Stopping motor A and cleaning up")
+    GPIO.output(AIN1, GPIO.LOW)
+    GPIO.output(AIN2, GPIO.LOW)
 
 except KeyboardInterrupt:
-    print("Program interrupted by user.")
+    pass
 
 finally:
-    pwm.stop()
-    GPIO.cleanup() # Clean up GPIO settings
+    pwm_motor_a.stop()
+    GPIO.cleanup()
