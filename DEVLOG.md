@@ -1,3 +1,31 @@
+### 12/14/2025
+
+4:39 PM
+
+Doing some design work on this robot
+
+I feel bad that I'm making it a lot simpler but this robot is so complex, like an arm has 6 different joints, it's not necessary
+
+I'm more interested in the whole body/painted look and not spending a lot of money/time to complete it
+
+6:02 PM
+
+I went through some images, video screenshots to figure out what roughly to make
+
+After the body/shell is modeled, need to scale it to fit parts and actually model the parts that make it move
+
+6:26 PM
+
+I've conceptualized the design in my mind
+
+<img src="./devlog-images/drawing.JPG"/>
+
+Decided on how to reduce the build, there actually won't be any servos on the legs, just the head.
+
+I was supposed to start modeling today but I am actually trying to finish the Dead Space Remake or put time down into it anyway
+
+This project takes motivation, it's that thing, doing things before announcing it to people eg. show it when it's real vs. concept
+
 ### 12/13/2025
 
 4:21 PM
